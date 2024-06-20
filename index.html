@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Meu Contador</title> 
+      <style>
+       * {
+        margin: 0;
+        box-sizing: border-box;
+       }
+       body {
+        min-height: 100vh;
+        background: linear-gradient(rgb(58, 1, 58), rgb(2, 44, 233));
+        color: azure;
+        display: grid;
+        place-items: center;
+
+
+       }
+
+       section {
+        background-color: #1a0125;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        
+       }
+       p {
+        font-size: 70px;
+       }
+       button {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 17px;
+        border: 0;
+        border-radius: 10px;
+        border-width: 10px;
+        background-color:blue ;
+        color: whitesmoke;  
+      }
+        
+
+      </style>
+    </head>
+
+    <body>
+        <section>
+          <h1>Meu Contador</h1>
+          <p>0</p>
+          <button onclick="diminuir()">Menos</button>
+          <button onclick="aumentar()">Mais</button>
+        </section>
+ 
+      <script>
+
+        // estado da minha aplicação
+        let numero = 0
+
+        // alteradores do estado da aplicação
+        function diminuir() {
+            numero = numero - 1
+            mostrarresultado()
+            console.log(numero)
+
+        }
+        function aumentar() {
+            numero = numero + 1
+            mostrarresultado()
+            console.log(numero)
+        }
+        // alterar o resultado na tela
+        function mostrarresultado() {
+            const p= document.querySelector("p")
+            console.log(p)
+            p.innerText = numero
+        }
+        //iniciar 
+        mostrarresultado()
+
+      </script>
+    </body>
+</html>
